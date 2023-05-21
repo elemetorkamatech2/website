@@ -1,18 +1,16 @@
-import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux"
-import { ourStore } from "../Redux/Store";
-import {AddNewUser, SetUsers, SetDtailsUser} from '../Redux/Action';
 
 export const AllUser = () => {
-    useEffect(() => {
-        const usersFromStore = useSelector((store) => {
-            return store.currentUser;
-        });
-
-        return  <>
-                <h1>hellow </h1>
-         </>
-       
-    }, []);
+    const usersFromStore = useSelector((store)=>  {
+         return store.users
+    })
+    return<>
+    {
+        usersFromStore != undefined && usersFromStore.length>0 &&
+        <>
+        <h1> num users: {usersFromStore.length}</h1>
+        </>
+    }
+    </>
 };
 

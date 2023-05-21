@@ -1,5 +1,5 @@
 //רכיב שבונה סטור מרדוסר, רכיב שמחבר רדוסרים
-import { createStore, combineReducers } from "redux";
+import { createStore} from "redux";
 //יבוא קומפוננטת רדוסר
 import {dataReducer} from './dataReducer';
 

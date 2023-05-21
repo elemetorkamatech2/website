@@ -1,4 +1,4 @@
-import produce from 'immer'
+import {produce} from 'immer';
 
 const InitialState = {
     //משתמשים
@@ -6,8 +6,7 @@ const InitialState = {
        {id:1,name:"avraham",mail:"avraham@gmail.com",password:1234},
        {id:1,name:"avraham2",mail:"avraham2@gmail.com",password:12342},
        {id:1,name:"avraham3",mail:"avraham3@gmail.com",password:12343}
-    ],
-    currentUser: { nameUser: "guest", passUser: 0 }
+    ]
 }
 
 export const dataReducer = produce((state = InitialState, action) => {
@@ -23,6 +22,5 @@ export const dataReducer = produce((state = InitialState, action) => {
             break;
         default:
             return state
-            break;
     }
 }, InitialState)

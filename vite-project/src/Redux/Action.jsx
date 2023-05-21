@@ -1,4 +1,4 @@
-//פעולות לסטור
+
 
 //הוספת משתמש חדש
 export const AddNewUser = (user) => {
