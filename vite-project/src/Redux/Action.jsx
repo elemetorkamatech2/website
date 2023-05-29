@@ -1,11 +1,8 @@
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 //הוספת משתמש חדש
 export const AddNewUser = (user) => {
     return { type: "ADD_NEW_USER", payload: user }
-}
+} 
 
 //שינוי פרטי משתמש
 export const SetDtailsUser = (newMail) => {
