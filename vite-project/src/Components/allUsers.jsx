@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import getUsersApi from '../api/Api';
-import { SetUsers } from '../redux/Action';
+import getUsersApi from '../Api/api';
+import { SetUsers } from '../Redux/action/';
 
 export function AllUser() {
   const dispcath = useDispatch();
