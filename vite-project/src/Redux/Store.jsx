@@ -1,11 +1,7 @@
-//רכיב שבונה סטור מרדוסר, רכיב שמחבר רדוסרים
-import { createStore} from "redux";
-//יבוא קומפוננטת רדוסר
-import {dataReducer} from './dataReducer';
+import { createStore } from 'redux';
+import { dataReducer } from './DataReducer';
 
-const reducer=dataReducer;
+const reducer = dataReducer;
 
-//בניית הסטור
-export const ourStore=createStore(reducer)
-  window.store=ourStore;
-
+export const ourStore = createStore(reducer);
+window.store = ourStore;
