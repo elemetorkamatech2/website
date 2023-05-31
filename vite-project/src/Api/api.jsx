@@ -1,12 +1,12 @@
-import axios  from "axios";
+import axios from 'axios';
 
-export const getUsersApi= async()=>{
-    try{
-        let response = await axios.get('http://localhost:3002/UserRoute/getAll')
-        return response.data
-    }
-    catch(err)
-    {
-        console.log(err)
-    }
-}
+const getUsersApi = async () => {
+  try {
+    const response = await axios.get(import.meta.env.VITE_URL_API);
+    return response.data;
+  } catch (err) {
+    console.log(err);
+    return null;
+  }
+};
+export default getUsersApi;
