@@ -1,7 +1,7 @@
 import './App.css'
 import { Provider } from 'react-redux'
 import { ourStore } from './Redux/Store'
-import { AllUser } from "./Components/allUsers";
+import { AllUser } from './Components/allUsers';
 
 function App() {
   return (
@@ -14,4 +14,4 @@ function App() {
   )
 }
 
-export default App;;
+export default App;;;;;;
