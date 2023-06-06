@@ -42,9 +42,13 @@
     "vite": "^4.3.2"
   },
   "lint-staged": {
-    "*.jsx": [
-      "eslint --fix",
-      "git add"
+    "**/*.{js,jsx}": [
+      "eslint . --fix"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
