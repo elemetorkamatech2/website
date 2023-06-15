@@ -2,14 +2,16 @@ import './App.css';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { ourStore } from './Redux/Store';
-import { AllUser } from './Components/allUsers';
+import { Page } from './Components/Page';
+
+
 
 function App() {
 	return (
 		<>
 			<Provider store={ourStore}>
-				<AllUser />
-				<h1>bsd 😂</h1>
+				
+				<Page></Page>
 			</Provider>
 		</>
 	);
