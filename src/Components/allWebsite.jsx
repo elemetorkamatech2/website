@@ -1,27 +1,28 @@
-import React,{useState,useEffect} from 'react';
-import {GetWebsitesApi} from '../Api/api'
+import React, { useState, useEffect } from 'react';
+import { GetWebsitesApi } from '../Api/api';
 
-
-export const WebsiteList = () => {
-  const [websites, setWebsites] = useState([]);
+export const AllWebsite = () => {
+	const [websites, setWebsites] = useState([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			const data = await GetWebsitesApi();
-      console.log(data);
+			console.log(data);
 			setWebsites(data);
 		};
 		fetchData();
 	}, []);
-  
-  return <>
-  {
-    websites.map((w)=><>
-    <div>{w.name}</div>
-    </>
-    )
-  }
-  </>
-  
-  
+	console.log(websites);
+
+	return <>
+		{
+			websites !== undefined && websites.length > 0 &&
+      websites.map((w) => <><div>{w.id}</div><div>{w.name}</div>
+      </>
+      )
+
+		}
+	</>;
+
+
 };
