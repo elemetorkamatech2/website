@@ -16,13 +16,13 @@ export const AllWebsite = () => {
 
 	return <>
 		{
-			websites !== undefined && websites.length > 0 &&
-      websites.map((w) => <><div>{w.id}</div><div>{w.name}</div>
-      </>
-      )
-
+			(websites !== undefined && websites.length > 0) ? (
+				websites.map((w) => <><div>{w.id}</div><div>{w.name}</div></>)
+			) : (
+				<>
+					<div>אין נתונים</div>
+				</>
+			)
 		}
 	</>;
-
-
 };
