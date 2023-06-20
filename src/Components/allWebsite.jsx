@@ -13,6 +13,7 @@ export const AllWebsite = () => {
 		fetchData();
 	}, []);
 	console.log(websites);
+	
 	return <>
 		{
 			(websites !== undefined && websites.length > 0) ? (
