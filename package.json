@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "test:e2e": "node tests/e2e/app.spec.js",
     "test:unit": "jest tests/unit",
-    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -24,6 +26,13 @@
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
+    "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addon-interactions": "^7.0.20",
+    "@storybook/addon-links": "^7.0.20",
+    "@storybook/blocks": "^7.0.20",
+    "@storybook/react": "^7.0.20",
+    "@storybook/react-vite": "^7.0.20",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
@@ -37,8 +46,12 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
+    "prop-types": "^15.8.1",
+    "sb": "^7.0.20",
+    "storybook": "^7.0.20",
     "vite": "^4.3.2"
   },
   "lint-staged": {
