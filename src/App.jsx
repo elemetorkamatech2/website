@@ -1,18 +1,11 @@
 import './App.css';
 import React from 'react';
-import { Provider } from 'react-redux';
-import { ourStore } from './Redux/Store';
-import { AllUser } from './Components/allUsers';
-
+import { AllWebsite } from './Components/allWebsite';
 function App() {
 	return (
 		<>
-			<Provider store={ourStore}>
-				<AllUser />
-				<h1>bsd 😂</h1>
-			</Provider>
+			<AllWebsite></AllWebsite>
 		</>
 	);
 }
-
 export default App;
