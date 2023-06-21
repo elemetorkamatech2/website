@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GetWebsitesApi } from '../Api/api';
 
 export const AllWebsite = () => {
+    
 	const [websites, setWebsites] = useState([]);
 
 	useEffect(() => {
@@ -20,7 +21,7 @@ export const AllWebsite = () => {
 				websites.map((w) => <><div>{w.id}</div><div>{w.name}</div></>)
 			) : (
 				<>
-					<div>אין נתונים</div>
+					<h1>אין נתונים</h1>
 				</>
 			)
 		}
