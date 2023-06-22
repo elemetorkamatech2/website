@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '../Components/Button';
+import { Button } from './Button';
 import './header.css';
+import { Link } from 'react-router-dom';
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 	<header>
 		<div className="storybook-header">
@@ -30,7 +31,9 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 						<span className="welcome">
               Welcome, <b>{user.name}</b>!
 						</span>
-						<Button size="small" onClick={onLogout} label="Log out" />
+						<Button size="small" onClick={onLogout} label="Log out" 
+						
+						 />
 					</>
 				) : (
 					<>

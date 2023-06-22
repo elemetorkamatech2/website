@@ -3,16 +3,24 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { ourStore } from './Redux/Store';
 import { Page } from './Components/Page';
+import { Nav } from './Components/nav';
+import { BrowserRouter } from 'react-router-dom';
+import { MyRoutes } from './myRoutes';
 
 
 
 function App() {
 	return (
 		<>
+			<BrowserRouter>
 			<Provider store={ourStore}>
-				
-				<Page></Page>
-			</Provider>
+                <Page></Page>
+				<MyRoutes></MyRoutes>
+				</Provider>
+
+				</BrowserRouter>
+
+
 		</>
 	);
 }
