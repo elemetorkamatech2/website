@@ -50,9 +50,9 @@ export const EditDetails = (props)=>{
       </div>
       <div class="col-75">
         <select id="categury" name="country">
-          <option value="australia">{myweb.categury}</option>
-          <option value="canada">games</option>
-          <option value="usa">Other</option>
+          <option value={myweb.categury}>{myweb.categury}</option>
+          <option value="games">games</option>
+          <option value="Other">Other</option>
         </select>
       </div>
     </div>
