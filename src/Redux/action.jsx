@@ -7,4 +7,7 @@ export const AddNewUser = (user) => {
   export const SetUsers = (users) => {
     return { type: 'SET_USERS', payload: users }
   };
+  export const SetWeb = (web) => {
+    return { type: 'SET_WEB', payload: web }
+  };
   

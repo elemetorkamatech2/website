@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from './Header';
 import {  useNavigate } from "react-router"
-
+import { Button } from './Button';
 import './page.css';
 
 export const Page = () => {
@@ -20,6 +20,9 @@ export const Page = () => {
       <section className="storybook-page">
         <h2>באתר זה תוכלו לרכוש ולנהל את סביבת הענן של האתר שלכם</h2>
       </section>
+      <Button size="small" onClick={() =>navigate("/Details1")} label="toDetails" />
+
     </article>
+
   );
 };
