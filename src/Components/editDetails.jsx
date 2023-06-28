@@ -50,7 +50,7 @@ export const EditDetails = (props)=>{
       </div>
       <div class="col-75">
         <select id="categury" name="country">
-          <option value={myweb.categury}>{myweb.categury}</option>
+          <option value={myweb.categury}>{myweb.categury} onChange={(e) =>dispatchCategury(e.target.value)}</option>
           <option value="games">games</option>
           <option value="Other">Other</option>
         </select>

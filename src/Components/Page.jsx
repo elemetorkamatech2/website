@@ -20,7 +20,6 @@ export const Page = () => {
       <section className="storybook-page">
         <h2>באתר זה תוכלו לרכוש ולנהל את סביבת הענן של האתר שלכם</h2>
       </section>
-      <Button size="small" onClick={() =>navigate("/Details1")} label="toDetails" />
 
     </article>
 
