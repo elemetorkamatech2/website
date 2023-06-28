@@ -1,10 +1,21 @@
 import './App.css';
 import React from 'react';
-import { AllWebsite } from './Components/allWebsite';
+import { Provider } from 'react-redux';
+import { ourStore } from './Redux/Store';
+import { Page } from './Components/Page';
+import { Nav } from './Components/nav';
+import { BrowserRouter } from 'react-router-dom';
+import { MyRoutes } from './myRoutes';
+
 function App() {
 	return (
 		<>
-			<AllWebsite></AllWebsite>
+			<BrowserRouter>
+			<Provider store={ourStore}>
+                <Page></Page>
+				<MyRoutes></MyRoutes>
+				</Provider>
+				</BrowserRouter>
 		</>
 	);
 }
