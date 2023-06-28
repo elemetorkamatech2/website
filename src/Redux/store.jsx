@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import { dataReducer } from './DataReducer';
+import { dataReducer } from './dataReducer';
 
 const reducer = dataReducer;
 

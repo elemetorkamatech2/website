@@ -7,8 +7,6 @@ import { Nav } from './Components/nav';
 import { BrowserRouter } from 'react-router-dom';
 import { MyRoutes } from './myRoutes';
 
-
-
 function App() {
 	return (
 		<>
@@ -17,12 +15,8 @@ function App() {
                 <Page></Page>
 				<MyRoutes></MyRoutes>
 				</Provider>
-
 				</BrowserRouter>
-
-
 		</>
 	);
 }
-
 export default App;
