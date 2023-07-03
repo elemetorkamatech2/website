@@ -14,6 +14,7 @@ export function AllUser() {
 			dispcath(SetUsers(usersFromServer));
 		}
 		fetchData();
+		
 	}, []);
 	const usersFromStore = useSelector((myStoer) => myStoer.users);
 	return (

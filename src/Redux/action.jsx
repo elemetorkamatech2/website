@@ -7,6 +7,6 @@ export const SetDtailsUser = (newMail) => {
 export const SetUsers = (users) => {
 	return { type: 'SET_USERS', payload: users };
 };
-export const SortWebsite=(Websites) =>{
-	return  { type:'SORT_WEBSITE',payload:Websites};
-};
+// export const SortWebsite=(Websites) =>{
+// 	return  { type:'SORT_WEBSITE',payload:Websites};
+// };

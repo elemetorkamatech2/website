@@ -1,22 +1,15 @@
 import axios from 'axios';
 
-const getUsersApi = async () => {
+export const GetWebsitesApi = async () => {
 	try {
-		const response = await axios.get(import.meta.env.VITE_URL_API);
+		const response = await axios.get(import.meta.env.VITE_URL_API + 'website');
 		return response.data;
-	} catch (err) {
+	} 
+	catch (err) {
 		console.log(err);
 		return null;
 	}
 };
 
-export const getWebsitesApi = async () => {
-	try {
-		const response = await axios.get(import.meta.env.VITE_URL_API);
-		return response.data;
-	} catch (err) {
-		console.log(err);
-		return null;
-	}
-};
-export default getUsersApi;
+
+

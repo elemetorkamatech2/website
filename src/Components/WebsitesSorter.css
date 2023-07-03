@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 0.5rem;
+    border: 10px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  /* .all-button{
+    display: block;
+    margin-left: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+  } */
+  /* .all-websites{
+    margin-top: 50%;
+
+  } */
+  .sort-buttons {
+    /* margin-top: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  
+  .sort-buttons button {
+   
+    padding: 1% 10%;
+    background-color: #ff0077;
+    color: #fff;
+    border: none;
+    border-radius: 25%;
+    cursor: pointer;
+    margin-left: 24.2%;
+  }
+  
+  .sort-buttons button:hover {
+    background-color: #69da19;
+  }
+  #Date-sort{
+    margin-left: 25.4%;
+  }
+  
