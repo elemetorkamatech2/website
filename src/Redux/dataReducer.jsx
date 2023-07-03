@@ -1,11 +1,7 @@
 import { produce } from 'immer';
 
-const InitialState = {
-	users: [
-		{ id: 1, name: 'avraham', mail: 'avraham@gmail.com', password: 1234 },
-	],
-	web:[{id:1,name:"kids",adress:"Jerusalem",categury:"clothing"}]
-};
+const InitialState = {};
+
 export const dataReducer = produce((state = InitialState, action) => {
 	switch (action.type) {
 	case 'SET_USERS':

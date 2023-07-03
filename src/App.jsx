@@ -10,6 +10,7 @@ import { AllUser } from './Components/allUsers';
 import { Dashboard } from './Components/Dashboard';
 
 
+
 function App() {
 	return (
 		<>
@@ -20,10 +21,7 @@ function App() {
 				<MyRoutes></MyRoutes>
 				</Provider>
 				</BrowserRouter>
-
-
 		</>
 	);
 }
-
 export default App;
