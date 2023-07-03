@@ -1,11 +1,10 @@
 import { Button } from "./Button"
 import {  useNavigate } from "react-router"
 
-export const Dashboard = ()=>{
+export const Details = ()=>{
     let navigate = useNavigate()
 
     return<>
- <Button size="small" onClick={() =>navigate("/Details1")} label="toDetails" />
-
+        <Button  primary size="small" onClick={() =>navigate("/EditDetails")} label="edit" />
     </>
-    }  
+    }

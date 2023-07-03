@@ -13,6 +13,10 @@ export const dataReducer = produce((state = InitialState, action) => {
 	case 'SET_DETAILS_USER':
 		state.users = action.payload;
 		break;
+		case 'SET_WEB':
+		state.web = action.payload;
+debugger
+		break;
 	default:
 		return state;
 	}

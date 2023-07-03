@@ -6,6 +6,10 @@ import { Page } from './Components/Page';
 import { Nav } from './Components/nav';
 import { BrowserRouter } from 'react-router-dom';
 import { MyRoutes } from './myRoutes';
+import { AllUser } from './Components/allUsers';
+import { Dashboard } from './Components/Dashboard';
+
+
 
 function App() {
 	return (
@@ -13,6 +17,7 @@ function App() {
 			<BrowserRouter>
 			<Provider store={ourStore}>
                 <Page></Page>
+				<Dashboard></Dashboard>
 				<MyRoutes></MyRoutes>
 				</Provider>
 				</BrowserRouter>
