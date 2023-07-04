@@ -10,7 +10,6 @@
   .storybook-button--primary {
     color: black;
     background-color: mediumaquamarine;
-    margin-top: 10px;
   }
   
   .storybook-button--secondary {
@@ -21,8 +20,6 @@
   .storybook-button--small {
     font-size: 12px;
     padding: 10px 16px;
-    background-color: rgb(205, 162, 102);
-
   }
   .storybook-button--medium {
     font-size: 14px;
