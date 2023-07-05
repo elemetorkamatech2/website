@@ -40,7 +40,6 @@ const InitialState = {web :[
 users: [
 	{ id: 1, name: 'avraham', mail: 'avraham@gmail.com', password: 1234 },
 ],
-// web:[{id:1,name:'kids',adress:'Jerusalem',categury:'clothing'}]
 };
 
 

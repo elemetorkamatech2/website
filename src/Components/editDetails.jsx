@@ -10,7 +10,7 @@ export const EditDetails = ()=>{
 	const dispatch = useDispatch();
 	const [myweb,setMyweb]=useState(
 		useSelector(state => state.web[0]));
-	console.log(myweb);
+        
 	const dispatchMyweb = () => {
 		dispatch(SetWeb(myweb));
 	};
@@ -119,18 +119,6 @@ export const EditDetails = ()=>{
 						<input type="text" id="ladress" name="lastname"  placeholder={myweb.userId}onChange={(e) =>dispatchuserId(e.target.value)}/>
 					</div>
 				</div>
-				{/* <div className="row">
-					<div className="col-25">
-						<label htmlFor="categury">categury</label>
-					</div>
-					<div className="col-75">
-						<select id="categury" name="country">
-							<option value={myweb.categury}>{myweb.categury} onChange={(e) =>dispatchCategury(e.target.value)}</option>
-							<option value="games">games</option>
-							<option value="Other">Other</option>
-						</select>
-					</div>
-				</div> */}
 				<br/>
 				<div className="row">
 					<Button size="small" onClick={() =>{alert('נשמר'),dispatchMyweb();}} label="submit" />
