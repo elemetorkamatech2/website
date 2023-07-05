@@ -5,7 +5,7 @@ export const Dashboard = ()=>{
     let navigate = useNavigate()
 
     return<>
- <Button size="small" onClick={() =>navigate("/Details1")} label="toDetails" />
+ <Button size="small" onClick={() =>navigate("/Details")} label="toDetails" />
 
     </>
     }  

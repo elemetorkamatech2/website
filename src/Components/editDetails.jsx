@@ -4,9 +4,10 @@ import { SetWeb } from "../Redux/action";
 import { useState } from "react";
 import './editDetails.css'
 
-export const EditDetails = (props)=>{
+export const EditDetails = ()=>{
 
     const dispatch = useDispatch();
+    
     const [myweb,setMyweb]=useState(
         useSelector(state => state.web[0]));
     // const web = useSelector((myStoer) => myStoer.web);
@@ -50,7 +51,7 @@ export const EditDetails = (props)=>{
       </div>
       <div class="col-75">
         <select id="categury" name="country">
-          <option value={myweb.categury}>{myweb.categury} onChange={(e) =>dispatchCategury(e.target.value)}</option>
+          <option value={myweb.categury} onChange={(e) =>dispatchCategury(e.target.value)}>{myweb.categury}</option>
           <option value="games">games</option>
           <option value="Other">Other</option>
         </select>
@@ -58,7 +59,7 @@ export const EditDetails = (props)=>{
     </div>
     <br/>
     <div class="row">
-    <Button size="small" onClick={() =>{alert("נשמר"),dispatchMyweb()}} label="submit" />
+    <Button size="small" onClick={() =>{alert("נשמר"),dispatchMyweb() }} label="submit" />
     </div>
     </form>
   </div>
