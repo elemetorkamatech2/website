@@ -1,11 +1,12 @@
-import { Button } from "./Button"
-import {  useNavigate } from "react-router"
+import {Button} from './Button';
+import { useNavigate } from 'react-router';
+import React from 'react';
 
 export const Dashboard = ()=>{
-    let navigate = useNavigate()
+	let navigate = useNavigate();
 
-    return<>
- <Button size="small" onClick={() =>navigate("/Details")} label="toDetails" />
-
-    </>
-    }  
+	return<>
+		<Button size="small" onClick={() =>navigate('/Details1')} label="Details" />
+		
+	</>;
+};  
