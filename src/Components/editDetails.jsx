@@ -10,7 +10,7 @@ export const EditDetails = ()=>{
 	const dispatch = useDispatch();
 	const [myweb,setMyweb]=useState(
 		useSelector(state => state.web[0]));
-        
+
 	const dispatchMyweb = () => {
 		dispatch(SetWeb(myweb));
 	};
