@@ -5,12 +5,13 @@ import { SetWeb } from '../Redux/action';
 import { useState } from 'react';
 import './editDetails.css';
 import React from 'react';
+import { postWebApi } from '../Api/apiWeb';
 
 export const EditDetails = (props)=>{
 
 	const dispatch = useDispatch();
 	const [erros, setErrors] = useState({ NameErros: "", })
-	const [myweb,setMyweb]=useState(...props);
+	const [myweb,setMyweb]=useState(props.data);
     const title = useRef();
     const description = useRef();
     const domain = useRef();   
@@ -26,10 +27,10 @@ export const EditDetails = (props)=>{
 			typeOfDomain=typeOfDomain.current.value,
 			cpu=cpu.current.value,memory=memory.current.value,status=status.current.value
 			,backups=backups.current.value,userId.current.value)
+			postWebApi(myweb);
+			dispatch(myweb)
 	};
-	const dispatchMyweb = () => {
-		dispatch(SetWeb(myweb));
-	};
+	
 	
 	
        
