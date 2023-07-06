@@ -13,12 +13,11 @@ export const AllWebsite = () => {
 		};
 		fetchData();
 	}, []);
-	console.log(websites);
 	
 	return <>
 		{
-			(websites !== undefined && websites.length > 0) ? (
-				websites.map((w) => <><div>{w.id}</div><div>{w.name}</div></>)
+			(websites !== null && websites.length > 0) ? (
+				websites.map((w) => <div key={w._id}>{w.title}</div>)
 			) : (
 				<>
 					<h1>אין נתונים</h1>
