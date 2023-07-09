@@ -11,7 +11,7 @@ export const Details = () => {
 		<>
 			<div id='Details'>
 				{data.map(item => (
-					<div key={item.id}>
+					<div key={item.userId}>
 						<h2>{item.title}</h2>
 						<p>{item.description}</p>
 					</div>

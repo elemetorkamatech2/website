@@ -15,4 +15,4 @@ import { useDispatch } from "react-redux";
 
 
 };
-export default getUsersApi;
+export default postWebApi;

@@ -2,7 +2,7 @@ import { produce } from 'immer';
 
 const InitialState = {web :[
 	{
-		id: 1,
+		userId: 1,
 		title: 'aaa',
 		description: 'aaa',
 		type_of_domain: 'qwert',
@@ -11,7 +11,7 @@ const InitialState = {web :[
 		status: 'qwer'
 	},
 	{
-		id: 4,
+		userId: 4,
 		title: 'bbb',
 		description: 'bbb',
 		type_of_domain: '66666',
@@ -20,7 +20,7 @@ const InitialState = {web :[
 		status: 'bbb'
 	},
 	{
-		id: 3,
+		userId: 3,
 		title: 'uuu',
 		description: 'uuu',
 		type_of_domain: 'uuu',
@@ -29,7 +29,7 @@ const InitialState = {web :[
 		status: 'uuu'
 	},
 	{
-		id: 2,
+		userId: 2,
 		title: 'ccc',
 		description: 'ccc',
 		type_of_domain: 'ccc',
