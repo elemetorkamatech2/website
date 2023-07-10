@@ -44,8 +44,9 @@ export const EditDetails = (props) => {
     const isValidTypeOfDomain = validateTypeOfDomain(enteredTypeOfDomain);
     const isValidDomain = validateDomain(enteredDomain);
 
-    if (!isValidTitle ||title.current.value!="" || description.current.value!=""|| userId.current.value!="" || backups.current.value!=""|| !isValidDescription ||  !isValidTypeOfDomain || !isValidDomain) {
+    if (!isValidTitle ||titleRef.current.value!="" || descriptionRef.current.value!=""|| userIdRef.current.value!="" || backupsRef.current.value!=""|| !isValidDescription ||  !isValidTypeOfDomain || !isValidDomain) {
       // Handle invalid fields (e.g., show error messages)
+      debugger;
       return;
     }
 
