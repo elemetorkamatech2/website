@@ -20,57 +20,85 @@ export const EditDetails = ()=>{
 		backups:"",
 		userId:"",
 	  });
-	
-    const title = useRef();
-    const description = useRef();
-    const domain = useRef();   
-	const typeOfDomain = useRef();   
-	const cpu = useRef();   
-    const memory = useRef();   
-    const status = useRef();   
-    const backups = useRef();   
-    const userId = useRef();   
+    const titleRef = useRef();
+  const descriptionRef = useRef();
+  const typeOfDomainRef = useRef();
+  const domainRef = useRef();
+  const cpuRef = useRef();   
+  const memoryRef = useRef();   
+  const statusRef = useRef();   
+  const backupsRef = useRef();   
+  const userIdRef = useRef(); 
+  
 
+	
+
+	const validateTitle = (title) => {
+		const titleRegex = /^(?=.*[a-zA-Z])[a-zA-Z\s-]{3,20}$/;
+		return titleRegex.test(title);
+	  };
+	
+	  const validateDescription = (description) => {
+		const descriptionRegex = /^(?=.*[a-zA-Z])[a-zA-Z\s-]{50,150}$/;
+		return descriptionRegex.test(description);
+	  };
+	
+	  const validateTypeOfDomain = (typeOfDomain) => {
+		const typeOfDomainRegex = /^[a-zA-Z0-9-]{1,63}(?<!-)$/;
+		return typeOfDomainRegex.test(typeOfDomain);
+	  };
+	
+	  const validateDomain = (domain) => {
+		const domainRegex = /^[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,6})?$/;
+		return domainRegex.test(domain);
+	  };
+  
 	const changMyweb=()=>{	
-		if (title.current.value!="") {
+
+	const isValidTitle = validateTitle(titleRef.current.value);
+    const isValidDescription = validateDescription(descriptionRef.current.value);
+    const isValidTypeOfDomain = validateTypeOfDomain(typeOfDomainRef.current.value);
+    const isValidDomain = validateDomain(domainRef.current.value);
+
+		if (titleRef.current.value!=""&&!isValidTitle) {
 			debugger
-			setMyweb({ ...myweb,title:title.current.value,
+			setMyweb({ ...myweb,title:titleRef.current.value,
 			})
 			}
 			if
-			 (description.current.value!="") {
+			 (descriptionRef.current.value!=""&&!isValidDescription) {
 				debugger
-				setMyweb({ ...myweb,description:description.current.value,
+				setMyweb({ ...myweb,description:descriptionRef.current.value,
 				})
 				}
-				if (domain.current.value) {
-					setMyweb({ ...myweb,domain:domain.current.value,
+				if (domainRef.current.value&&!isValidDomain) {
+					setMyweb({ ...myweb,domain:domainRef.current.value,
 					})
 					}
-					if (typeOfDomain.current.value) {
-						setMyweb({ ...myweb,typeOfDomain:typeOfDomain.current.value,
+					if (typeOfDomainRef.current.value&&  !isValidTypeOfDomain) {
+						setMyweb({ ...myweb,typeOfDomain:typeOfDomainRef.current.value,
 						})
 						} 
-						if (cpu.current.value) {
-							setMyweb({ ...myweb,cpu:cpu.current.value,
+						if (cpuRef.current.value) {
+							setMyweb({ ...myweb,cpu:cpuRef.current.value,
 							})
 							}
-							if (memory.current.value) {
-								setMyweb({ ...myweb,memory:memory.current.value,
+							if (memoryRef.current.value) {
+								setMyweb({ ...myweb,memory:memoryRef.current.value,
 								})
 								}
-								if (status.current.value) {
-									setMyweb({ ...myweb,status:status.current.value,
+								if (statusRef.current.value) {
+									setMyweb({ ...myweb,status:statusRef.current.value,
 									})
 									}
-									if (backups.current.value!="") {
+									if (backupsRef.current.value!="") {
 										debugger
-										setMyweb({ ...myweb,backups:backups.current.value
+										setMyweb({ ...myweb,backups:backupsRef.current.value
 										})
 										debugger
 										}
-										if (userId.current.value!="") {
-											setMyweb({ ...myweb,userId:userId.current.value,
+										if (userIdRef.current.value!="") {
+											setMyweb({ ...myweb,userId:userIdRef.current.value,
 											})
 											}
 						
@@ -91,7 +119,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="fname"> title</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="fname" ref={title} name="firstname" placeholder={myweb.title} />
+						<input type="text" id="fname" ref={titleRef} name="firstname" placeholder={myweb.title} />
 					</div>
 				</div>
 				<div className="row">
@@ -99,7 +127,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">description</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" ref={description} name="lastname"  placeholder={myweb.description}/>
+						<input type="text" id="ladress" ref={descriptionRef} name="lastname"  placeholder={myweb.description}/>
 						
 					</div>
 				</div>
@@ -108,7 +136,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">domain</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" ref={domain} name="lastname"  placeholder={myweb.domain}/>
+						<input type="text" id="ladress" ref={domainRef} name="lastname"  placeholder={myweb.domain}/>
 						
 					</div>
 				</div>
@@ -117,7 +145,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">typeOfDomain</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname" ref={typeOfDomain} placeholder={myweb.typeOfDomain}/>
+						<input type="text" id="ladress" name="lastname" ref={typeOfDomainRef} placeholder={myweb.typeOfDomain}/>
 						
 					</div>
 				</div>
@@ -126,7 +154,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">cpu</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname" ref={cpu} placeholder={myweb.cpu}/>
+						<input type="text" id="ladress" name="lastname" ref={cpuRef} placeholder={myweb.cpu}/>
 						
 					</div>
 				</div>
@@ -135,7 +163,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">memory</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname" ref={memory} placeholder={myweb.memory}/>
+						<input type="text" id="ladress" name="lastname" ref={memoryRef} placeholder={myweb.memory}/>
 						
                    </div>
 				</div>
@@ -144,7 +172,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">status</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname" ref={status} placeholder={myweb.status}/>
+						<input type="text" id="ladress" name="lastname" ref={statusRef} placeholder={myweb.status}/>
 						
 					</div>
 				</div>
@@ -153,7 +181,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">backups</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname" ref={backups} placeholder={myweb.backups}/>
+						<input type="text" id="ladress" name="lastname" ref={backupsRef} placeholder={myweb.backups}/>
 						
 					</div>
 				</div>
@@ -162,7 +190,7 @@ export const EditDetails = ()=>{
 						<label htmlFor="ladress">userId</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname" ref={userId} placeholder={myweb.userId}/>
+						<input type="text" id="ladress" name="lastname" ref={userIdRef} placeholder={myweb.userId}/>
 						
 					</div>
 				</div>
