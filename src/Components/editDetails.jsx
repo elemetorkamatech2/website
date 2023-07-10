@@ -5,7 +5,7 @@ import { SetWeb } from '../Redux/action';
 import './editDetails.css';
 import { postWebApi } from '../Api/apiWeb';
 
-export const EditDetails = () => {
+export const EditDetails = (props) => {
  const [myweb, setMyweb] = useState({
     title: "",
     description: "",
@@ -17,7 +17,6 @@ export const EditDetails = () => {
     backups:"",
     userId:"",
   });
-
 
   const titleRef = useRef();
   const descriptionRef = useRef();
