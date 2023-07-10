@@ -1,17 +1,16 @@
 import { Button } from './Button';
-import { useRef } from 'react';
+import { useRef ,useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { SetWeb } from '../Redux/action';
-import { useState } from 'react';
 import './editDetails.css';
 import React from 'react';
 import { postWebApi } from '../Api/apiWeb';
 
-export const EditDetails = (props)=>{
+export const EditDetails = ()=>{
 
 	const dispatch = useDispatch();
 	const [erros, setErrors] = useState({ NameErros: "", })
-	const [myweb,setMyweb]=useState(props.data);
+	const [myweb,setMyweb]=useState(useSelector(state => state.web[0]) );
+
     const title = useRef();
     const description = useRef();
     const domain = useRef();   
@@ -22,14 +21,53 @@ export const EditDetails = (props)=>{
     const backups = useRef();   
     const userId = useRef();   
 
-	const changMyweb=()=>{
-		setMyweb( title=title.current.value,description=description.current.value,domain=domain.current.value,
-			typeOfDomain=typeOfDomain.current.value,
-			cpu=cpu.current.value,memory=memory.current.value,status=status.current.value
-			,backups=backups.current.value,userId.current.value)
-			postWebApi(myweb);
-			dispatch(myweb)
-	};
+	const changMyweb=()=>{	
+		if (title.current.value!="") {
+			debugger
+			setMyweb({ ...myweb,title:title.current.value,
+			})
+			}
+			if
+			 (description.current.value!="") {
+				debugger
+				setMyweb({ ...myweb,description:description.current.value,
+				})
+				}
+				if (domain.current.value) {
+					setMyweb({ ...myweb,domain:domain.current.value,
+					})
+					}
+					if (typeOfDomain.current.value) {
+						setMyweb({ ...myweb,typeOfDomain:typeOfDomain.current.value,
+						})
+						} 
+						if (cpu.current.value) {
+							setMyweb({ ...myweb,cpu:cpu.current.value,
+							})
+							}
+							if (memory.current.value) {
+								setMyweb({ ...myweb,memory:memory.current.value,
+								})
+								}
+								if (status.current.value) {
+									setMyweb({ ...myweb,status:status.current.value,
+									})
+									}
+									if (backups.current.value!="") {
+										debugger
+										setMyweb({ ...myweb,backups:backups.current.value
+										})
+										debugger
+										}
+										if (userId.current.value!="") {
+											setMyweb({ ...myweb,userId:userId.current.value,
+											})
+											}
+						
+		console.log(myweb);
+		debugger
+			//postWebApi(myweb);
+	 };
 	
 	
 	
@@ -43,8 +81,7 @@ export const EditDetails = (props)=>{
 						<label htmlFor="fname"> title</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="fname" name="firstname" placeholder={myweb.title} />
-						ref{title}
+						<input type="text" id="fname" ref={title} name="firstname" placeholder={myweb.title} />
 					</div>
 				</div>
 				<div className="row">
@@ -52,8 +89,8 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">description</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.description}/>
-						ref{description}
+						<input type="text" id="ladress" ref={description} name="lastname"  placeholder={myweb.description}/>
+						
 					</div>
 				</div>
 				<div className="row">
@@ -61,8 +98,8 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">domain</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.domain}/>
-						ref{domain}
+						<input type="text" id="ladress" ref={domain} name="lastname"  placeholder={myweb.domain}/>
+						
 					</div>
 				</div>
 				<div className="row">
@@ -70,8 +107,8 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">typeOfDomain</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.typeOfDomain}/>
-						ref{typeOfDomain}
+						<input type="text" id="ladress" name="lastname" ref={typeOfDomain} placeholder={myweb.typeOfDomain}/>
+						
 					</div>
 				</div>
 				<div className="row">
@@ -79,8 +116,8 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">cpu</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.cpu}/>
-						ref{cpu}
+						<input type="text" id="ladress" name="lastname" ref={cpu} placeholder={myweb.cpu}/>
+						
 					</div>
 				</div>
 				<div className="row">
@@ -88,8 +125,8 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">memory</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.memory}/>
-						ref{memory}
+						<input type="text" id="ladress" name="lastname" ref={memory} placeholder={myweb.memory}/>
+						
                    </div>
 				</div>
 				<div className="row">
@@ -97,8 +134,8 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">status</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.status}/>
-						ref{status}
+						<input type="text" id="ladress" name="lastname" ref={status} placeholder={myweb.status}/>
+						
 					</div>
 				</div>
 				<div className="row">
@@ -106,8 +143,8 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">backups</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.backups}/>
-						ref{backups}
+						<input type="text" id="ladress" name="lastname" ref={backups} placeholder={myweb.backups}/>
+						
 					</div>
 				</div>
 				<div className="row">
@@ -115,13 +152,13 @@ export const EditDetails = (props)=>{
 						<label htmlFor="ladress">userId</label>
 					</div>
 					<div className="col-75">
-						<input type="text" id="ladress" name="lastname"  placeholder={myweb.userId}/>
-						ref{userId}
+						<input type="text" id="ladress" name="lastname" ref={userId} placeholder={myweb.userId}/>
+						
 					</div>
 				</div>
 				<br/>
 				<div className="row">
-					<Button size="small" onClick={() =>{alert('נשמר'),changMyweb();}} label="submit" />
+					<Button size="small" onClick={() =>{changMyweb()}} label="submit" />
 				</div>
 			</form>
 		</div>

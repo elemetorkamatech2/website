@@ -2,40 +2,44 @@ import { produce } from 'immer';
 
 const InitialState = {web :[
 	{
-		id: 1,
+		userId: 1,
 		title: 'aaa',
 		description: 'aaa',
 		type_of_domain: 'qwert',
 		cpu: 'qwert',
 		memory: '123452',
-		status: 'qwer'
+		status: 'qwer',
+		backups:''
 	},
 	{
-		id: 4,
+		userId: 4,
 		title: 'bbb',
 		description: 'bbb',
 		type_of_domain: '66666',
 		cpu: 'bbb',
 		memory: '123456',
-		status: 'bbb'
+		status: 'bbb',
+		backups:''
 	},
 	{
-		id: 3,
+		userId: 3,
 		title: 'uuu',
 		description: 'uuu',
 		type_of_domain: 'uuu',
 		cpu: 'uuu',
 		memory: '777777',
-		status: 'uuu'
+		status: 'uuu',
+		backups:''
 	},
 	{
-		id: 2,
+		userId: 2,
 		title: 'ccc',
 		description: 'ccc',
 		type_of_domain: 'ccc',
 		cpu: 'ccc',
 		memory: '00000',
-		status: 'ccc'
+		status: 'ccc',
+		backups:''
 	},],
 users: [
 	{ id: 1, name: 'avraham', mail: 'avraham@gmail.com', password: 1234 },
