@@ -31,6 +31,7 @@ export const EditDetails = ()=>{
         const titleRegex = /^(?=.*[a-zA-Z])[a-zA-Z\s-]{3,20}$/;
         return titleRegex.test(title);
       };
+      
       const validateDescription = (description) => {
         const descriptionRegex = /^(?=.*[a-zA-Z])[a-zA-Z\s-]{50,150}$/;
         return descriptionRegex.test(description);
