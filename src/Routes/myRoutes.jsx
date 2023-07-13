@@ -11,9 +11,7 @@ export const MyRoutes = () => {
                  <Route path="Singnin"    element={<Singnin />}></Route> 
                  <Route path="Login"      element={<Login />}></Route> 
                  <Route path="EditDetails"      element={<EditDetails />}></Route> 
-                 <Route path="Details"      element={<Details />}></Route> 
-
-              
+                 <Route path="Details"      element={<Details />}></Route>     
         </Routes>
 
     </>
