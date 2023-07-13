@@ -178,10 +178,3 @@ export const EditDetails = ()=>{
         </div>
     </>;
 };
-
-
-
-
-
-
-
