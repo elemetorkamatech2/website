@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { Button } from './Button';
-import './Details.css';
+import { Button } from '../Button/Button';
 import React from 'react';
 
 export const Details = () => {
@@ -12,7 +11,7 @@ export const Details = () => {
 		<>
 			<div id='Details'>
 				{data.map(item => (
-					<div key={item.id}>
+					<div key={item.userId}>
 						<h2>{item.title}</h2>
 						<p>{item.description}</p>
 					</div>

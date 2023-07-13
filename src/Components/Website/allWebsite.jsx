@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GetWebsitesApi } from '../Api/api';
+import { GetWebsitesApi } from '../../Api/api';
 
 export const AllWebsite = () => {
     

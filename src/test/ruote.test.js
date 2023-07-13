@@ -10,11 +10,9 @@ test('navigates to the correct page when the button is clicked', () => {
       <Page />
     </MemoryRouter>
   );
-
   // Find the button and simulate a click
   const button = screen.getByText('Go to Login');
   button.click();
-
   // Assert that the URL has changed to /Login
   expect(window.location.pathname).toBe('/Login');
 });
