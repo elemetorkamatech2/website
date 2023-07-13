@@ -21,7 +21,7 @@ function App() {
 				<MyRoutes></MyRoutes>
 				</Provider>
 				</BrowserRouter>
-				{/* <AllWebsite></AllWebsite> */}
+				<AllWebsite></AllWebsite>
 		</>
 	);
 }
