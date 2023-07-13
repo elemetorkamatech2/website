@@ -6,10 +6,8 @@ import { Page } from './Components/Page/Page';
 import { Nav } from './Components/Nav/nav';
 import { BrowserRouter } from 'react-router-dom';
 import { MyRoutes } from './Routes/myRoutes';
-//import { AllUser } from './Components/allUsers';
 import { Dashboard } from './Components/Website/Dashboard';
- import { AllWebsite } from './Components/Website/allWebsite';
-
+import { AllWebsite } from './Components/Website/allWebsite';
 
 function App() {
 	return (

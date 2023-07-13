@@ -61,5 +61,3 @@ export const dataReducer = produce((state = InitialState, action) => {
 		return state;
 	}
 }, InitialState);
-
- 
