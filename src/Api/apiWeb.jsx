@@ -12,7 +12,5 @@ import { useDispatch } from "react-redux";
 		console.log(err);
 		return null;
 	}
-
-
 };
 export default postWebApi;
