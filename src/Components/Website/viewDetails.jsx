@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { Button } from './Button';
+import { Button } from '../Button/Button';
 import React from 'react';
 
 export const Details = () => {

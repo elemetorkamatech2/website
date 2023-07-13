@@ -1,9 +1,9 @@
-import { Button } from './Button';
+import { Button } from '../Button/Button';
 import { useRef ,useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './editDetails.css';
 import React from 'react';
-import { postWebApi } from '../Api/apiWeb';
+//import { postWebApi } from '.../Api/apiWeb';
 export const EditDetails = ()=>{
     const dispatch = useDispatch();
     const [erros, setErrors] = useState({ NameErros: "", })

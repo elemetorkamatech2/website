@@ -1,7 +1,7 @@
 import React from 'react';
-import { Header } from './Header';
+import { Header } from '../Header/Header';
 import {  useNavigate } from "react-router"
-import { Button } from './Button';
+import { Button } from '../Button/Button';
 import './page.css';
 
 export const Page = () => {
