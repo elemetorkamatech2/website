@@ -1,6 +1,6 @@
 
 import React, {useState, useRef} from 'react';
-import './FormCreatingWebsite.css'
+import './FormCreateWebsite.css'
 import { useNavigate } from "react-router";
 import {CreatingWebsite} from "./CreateWebsite";
 
@@ -123,7 +123,7 @@ export const FormCreatingWebsite = ()=>{
 
 
     return<>
-    { isgood==0&&<h1>There are errors, please correct the values</h1>}
+    { isgood==0&&<p>There are errors, please correct the values</p>}
       <div className="form">
           <div className="form-body">
               <div className="title">
