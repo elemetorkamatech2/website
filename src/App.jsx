@@ -10,17 +10,18 @@ import { Dashboard } from './Components/Website/Dashboard';
 import { AllWebsite } from './Components/Website/allWebsite';
 
 function App() {
-	return (
-		<>
-			<BrowserRouter>
-			<Provider store={ourStore}>
+    return (
+        <>
+            <BrowserRouter>
+            <Provider store={ourStore}>
+				{/* <FormCreatingWebsite></FormCreatingWebsite> */}
                 <Page></Page>
-				<Dashboard></Dashboard>
-				<MyRoutes></MyRoutes>
-				</Provider>
-				</BrowserRouter>
-				<AllWebsite></AllWebsite>
-		</>
-	);
+                <Dashboard></Dashboard>
+                <MyRoutes></MyRoutes>
+                </Provider>
+                </BrowserRouter>
+                <AllWebsite></AllWebsite>
+        </>
+    );
 }
 export default App;

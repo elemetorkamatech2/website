@@ -11,6 +11,7 @@ export const Page = () => {
     <article>
       <Header
         user={user}
+        put={()=>navigate("/formCreatingWebsite")}            
         onLogin={() =>navigate("/Login")}
         onLogout={() => setUser(undefined)}
         onCreateAccount={() =>navigate("/Singnin")}

@@ -2,8 +2,8 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { Button } from '../Button/Button';
 import React from 'react';
-
 export const Details = () => {
+
 	const data = useSelector(state => state.web);
 	let navigate = useNavigate();
 	console.log(data);
@@ -21,3 +21,4 @@ export const Details = () => {
 		</>
 	);
 };
+
