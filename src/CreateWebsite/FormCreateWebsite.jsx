@@ -1,7 +1,8 @@
+
 import React, {useState, useRef} from 'react';
 import './FormCreatingWebsite.css'
 import { useNavigate } from "react-router";
-import {CreatingWebsite} from "./CreatingWebsite";
+import {CreatingWebsite} from "./CreateWebsite";
 
 export const FormCreatingWebsite = ()=>{
     const [errors, setErrors] = useState({  title: '',description: '',domain:"",typeOfDomain:"",cpu:"",memory:"",userId:""})
@@ -12,7 +13,7 @@ export const FormCreatingWebsite = ()=>{
     const mycpuRef = useRef(0)
     const myuserIdRef = useRef(0)
     const mymemoryRef = useRef(0)
-    const [isgood, setisgood] = useState(false)
+    const [isgood, setisgood] = useState(2)
     const [site, setsite] = useState(false)
     const  title = (e) => {
         const  title = /^[a-zA-Z\s]*$/
@@ -86,7 +87,6 @@ export const FormCreatingWebsite = ()=>{
     }
     const navigate = useNavigate()
     const handleSubmit = () => {
-        // בדיקה שכל הערכים תקינים
         if (
           errors.title === '' &&
           errors.description === '' &&
@@ -107,17 +107,15 @@ export const FormCreatingWebsite = ()=>{
                 "title":  mytitleRef.current.value,
                 "description": mydescriptionRef.current.value,
                 "typeOfDomain": mytypeOfDomainRef.current.value,
-                "cpu": mycpuRef.current.value,
-                "memory":mymemoryRef.current.value,
+                "cpu":parseInt( mycpuRef.current.value),
+                "memory":parseInt(mymemoryRef.current.value),
                 "userId":myuserIdRef.current.value,
                 "domain": mydomainRef.current.value,
 
             })
-          alert('הערכים תקינים, ממשיך לקומפוננטה הבאה');
-          setisgood(true)
+          setisgood(1)
         } else {
-          // יש שגיאות, ניתן להתייחס אליהן בהתאם
-          setisgood(false)
+          setisgood(0)
         }
       };
       
@@ -125,7 +123,7 @@ export const FormCreatingWebsite = ()=>{
 
 
     return<>
-    { !isgood&&<h1>There are errors, please correct the values</h1>}
+    { isgood==0&&<h1>There are errors, please correct the values</h1>}
       <div className="form">
           <div className="form-body">
               <div className="title">
@@ -177,8 +175,7 @@ export const FormCreatingWebsite = ()=>{
               <button type="submit" class="btn" onClick={handleSubmit}>Register</button>
           </div>
       </div>   
-      { isgood&&<CreatingWebsite site={site} ></CreatingWebsite>}   
+      { isgood==1&&<CreatingWebsite site={site} ></CreatingWebsite>}   
       </>       
 }
 
- 
