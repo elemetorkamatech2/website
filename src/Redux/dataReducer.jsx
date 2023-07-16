@@ -1,6 +1,8 @@
 import { produce } from 'immer';
 
-const InitialState = {web :[
+const InitialState = {
+	userId: "user123",	
+	web :[
 	{
 		userId: 1,
 		title: 'aaa',
@@ -40,8 +42,8 @@ const InitialState = {web :[
 users: [
 	{ id: 1, name: 'avraham', mail: 'avraham@gmail.com', password: 1234 },
 ],
-};
 
+};
 
 export const dataReducer = produce((state = InitialState, action) => {
 	switch (action.type) {

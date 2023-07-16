@@ -7,6 +7,7 @@ export const Dashboard = ()=>{
 
 	return<>
 		<Button size="small" onClick={() =>navigate('/Details')} label="Details" />
-		
+		<Button size="small" onClick={() =>navigate('/AllWebsite')} label="All Website" />
+
 	</>;
 };  
