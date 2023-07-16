@@ -45,7 +45,6 @@ users: [
 
 };
 
-
 export const dataReducer = produce((state = InitialState, action) => {
 	switch (action.type) {
 	case 'SET_USERS':

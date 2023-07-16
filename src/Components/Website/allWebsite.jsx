@@ -4,10 +4,8 @@ import { useSelector } from 'react-redux';
 import '../EditDetails/editDetails.css';
 
 export const AllWebsite = () => {
-
 	const userId = useSelector((myStoer) => myStoer.userId);
 	const [websites, setWebsites] = useState([]);
-
 	useEffect(() => {
 		const fetchData = async () => {
 			const data = await GetWebsitesApi(userId);
@@ -16,7 +14,6 @@ export const AllWebsite = () => {
 		};
 		fetchData();
 	}, []);
-
 	return <>
 		{
 			(websites !== null && websites.length > 0) ? (
