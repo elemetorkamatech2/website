@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-
-export const GetWebsitesApi = async () => {
+export const GetWebsitesApi = async (userId) => {
 	try {
-		const response = await axios.get('http://localhost:3000/website' , config);
+		const response = await axios.get(`${import.meta.env.VITE_URL_API}website/${userId}`);
 		return response.data;
 	}
 	catch (err) {
