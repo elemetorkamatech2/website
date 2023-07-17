@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from './Button';
 import './header.css';
 import { Link } from 'react-router-dom';
+import { Login } from './login';
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 	<header>
 		<div className="storybook-header">
@@ -26,7 +27,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 				<h1>Elementor</h1>
 			</div>
 			<div>
-				{user ? (
+				{/* {user ? (
 					<>
 						<span className="welcome">
               Welcome, <b>{user.name}</b>!
@@ -36,12 +37,13 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 						 />
 					</>
 				) : (
-					<>
-						<Button size="small" onClick={onLogin} label="Log in" />
-						<Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+					<> */}
+						{/* <Button size="small" onClick={onLogin} label="Log in" /> */}
+						{/* <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
 					</>
-				)}
+				)} */}
 			</div>
+			<Login></Login>
 		</div>
 	</header>
 );

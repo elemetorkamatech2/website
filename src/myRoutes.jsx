@@ -9,7 +9,7 @@ export const MyRoutes = () => {
                  <Route path="Main_Page1" element={<Main_Page />}></Route> 
                  <Route path="Singnin"    element={<Singnin />}></Route> 
                  <Route path="Login"      element={<Login />}></Route> 
-              
+
         </Routes>
 
     </>

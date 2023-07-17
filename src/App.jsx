@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { MyRoutes } from './myRoutes';
 import keycloak from "./Keycloak/keycloak";
 import { ReactKeycloakProvider } from "@react-keycloak/web";
-import PrivateRoute from "./Keycloak/PrivateRoute";
+// import PrivateRoute from "./Keycloak/PrivateRoute";
 
 function App() {
 	return (
