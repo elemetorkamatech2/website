@@ -14,7 +14,6 @@ function App() {
         <>
             <BrowserRouter>
             <Provider store={ourStore}>
-				{/* <FormCreatingWebsite></FormCreatingWebsite> */}
                 <Page></Page>
                 <Dashboard></Dashboard>
                 <MyRoutes></MyRoutes>
