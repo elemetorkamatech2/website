@@ -18,7 +18,7 @@ export const EditDetails = ()=>{
         backups:"",
         userId:"",
       });
-    const titleRef = useRef();
+  const titleRef = useRef();
   const descriptionRef = useRef();
   const typeOfDomainRef = useRef();
   const domainRef = useRef();

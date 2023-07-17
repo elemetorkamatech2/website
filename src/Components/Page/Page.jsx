@@ -14,6 +14,7 @@ export const Page = () => {
         onLogin={() =>navigate("/Login")}
         onLogout={() => setUser(undefined)}
         onCreateAccount={() =>navigate("/Singnin")}
+        put={()=>navigate("/formCreatingWebsite")}  
       />
       <section className="storybook-page">
         <h2>באתר זה תוכלו לרכוש ולנהל את סביבת הענן של האתר שלכם</h2>
