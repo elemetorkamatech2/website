@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from './Button';
+// import { Button } from './Button';
 import './header.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Login } from './login';
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
     <header>
