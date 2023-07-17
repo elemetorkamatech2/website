@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from './Header';
+import { Header } from './header';
 import {  useNavigate } from "react-router"
 
 import './page.css';
