@@ -10,6 +10,13 @@ export const AddNewUser = (user) => {
   export const SetWeb = (web) => {
     return { type: 'SET_WEB', payload: web }
   };
+  export const SetToken = (token) => {
+    return { type: 'SET_TOKEN', payload: token }
+  }
+  export const SetUserId = (userId) => {
+    console.log("xxxxxxxxx"+userId);
+    return { type: 'SET_USER_ID', payload: userId }
+  }
   
   
 
