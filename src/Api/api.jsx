@@ -9,3 +9,14 @@ export const GetWebsitesApi = async (userId) => {
 		return null;
 	}
 }
+//פונקציה לבדיקה-- לא למחוק!
+export const cheackInReact = async () => {
+	try {
+		debugger
+		const response = await axios.get('http://localhost:3003/website/protected');
+		console.log(" 👨🏼הפונקציה בריאקט");
+		console.log(response.data);
+	} catch (error) {
+		console.error(error);
+	}
+}
