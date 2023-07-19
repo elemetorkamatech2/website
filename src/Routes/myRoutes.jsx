@@ -1,10 +1,12 @@
-import { Route, Routes } from "react-router-dom"
-import { Main_Page } from "../Components/Main_Page/main_page"
-import { Singnin } from "../Components/SingIn/singnin"
-import { Login } from "../Components/Login/login"
-import { EditDetails } from "../Components/EditDetails/editDetails"
-import { Details } from "../Components/Website/viewDetails"
-import { AllWebsite } from "../Components/Website/allWebsite"
+import { Route, Routes } from "react-router-dom";
+import { Main_Page } from "../Components/Main_Page/main_page";
+import { Singnin } from "../Components/SingIn/singnin";
+import { Login } from "../Components/Login/login";
+import { EditDetails } from "../Components/EditDetails/editDetails";
+import { Details } from "../Components/Website/viewDetails";
+import { AllWebsite } from "../Components/Website/allWebsite";
+import { Dashboard } from "../Components/Website/Dashboard";
+
 export const MyRoutes = () => {
     return <>
         <Routes>
@@ -13,9 +15,8 @@ export const MyRoutes = () => {
                  <Route path="Login"      element={<Login />}></Route> 
                  <Route path="EditDetails"      element={<EditDetails />}></Route> 
                  <Route path="Details"      element={<Details />}></Route>    
-                 <Route path="AllWebsite"   element={<AllWebsite />}></Route>     
- 
+                 <Route path="AllWebsite"   element={<AllWebsite />}></Route> 
+                 <Route path="Dashboard"   element={<Dashboard />}></Route>     
         </Routes>
-
     </>
 }

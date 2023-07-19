@@ -16,7 +16,6 @@ function App() {
 				<BrowserRouter>
 					<Provider store={ourStore}>
 						<Page></Page>
-						<Dashboard></Dashboard>
 						<MyRoutes></MyRoutes>
 					</Provider>
 				</BrowserRouter>

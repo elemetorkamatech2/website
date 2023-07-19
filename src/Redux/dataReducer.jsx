@@ -2,7 +2,6 @@ import { produce } from 'immer';
 
 const InitialState = {
 	token: null, userId: null,
-	// userId: "user123",
 	web: [
 		{
 			userId: 1,
@@ -43,7 +42,6 @@ const InitialState = {
 	users: [
 		{ id: 1, name: 'avraham', mail: 'avraham@gmail.com', password: 1234 },
 	],
-
 };
 
 export const dataReducer = produce((state = InitialState, action) => {
