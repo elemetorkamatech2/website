@@ -1,21 +1,22 @@
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { Button } from '../Button/Button';
+import { useLocation } from 'react-router-dom';
 import React from 'react';
 
 export const Details = () => {
-	const data = useSelector(state => state.web);
+	const location = useLocation();
+	const website = location.state.website;
 	let navigate = useNavigate();
-	console.log(data);
 	return (
 		<>
 			<div id='Details'>
-				{data.map(item => (
-					<div key={item.userId}>
-						<h2>{item.title}</h2>
-						<p>{item.description}</p>
+					<div key={website.userId}>
+						<h2>title: {website.title}</h2>
+						<p>description: {website.description}</p>
+						<p>status: {website.status}</p>
+						<p>memory: {website.memory}</p>
+						<p>cpu: {website.cpu}</p>
 					</div>
-				))}
 			</div>
 			<Button  primary size="small" onClick={() =>navigate('/EditDetails')} label="edit" />
 		</>
