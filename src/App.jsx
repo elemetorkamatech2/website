@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { MyRoutes } from './Routes/myRoutes';
 import { Dashboard } from './Components/Website/Dashboard';
 import { AllWebsite } from './Components/Website/allWebsite';
+import {FormCreatingWebsite} from './Components/FormCreatingWebsite/FormCreatingWebsite'
 
 function App() {
 	return (
@@ -19,7 +20,7 @@ function App() {
 				<MyRoutes></MyRoutes>
 				</Provider>
 				</BrowserRouter>
-				<AllWebsite></AllWebsite>
+				
 		</>
 	);
 }
