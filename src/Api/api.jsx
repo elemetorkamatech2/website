@@ -6,6 +6,7 @@ export const GetWebsitesApi = async (userId) => {
 		return response.data;
 	}
 	catch (err) {
+		console.log(err);
 		return null;
 	}
 }

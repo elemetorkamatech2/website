@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from '../Button/Button';
 import './header.css';
 import { Link } from 'react-router-dom';
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
+export const Header = ({ user, onLogin, onLogout, onCreateAccount,put }) => (
 	<header>
 		<div className="storybook-header">
 			<div>
@@ -12,7 +12,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 						<path
 							d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
 							fill="#FFF"
-						/>
+					/>
 						<path
 							d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
 							fill="mediumspringgreen"
@@ -37,8 +37,10 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 					</>
 				) : (
 					<>
+					    <Button size="small" onClick={put} label="put" />
 						<Button size="small" onClick={onLogin} label="Log in" />
-						<Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+					    <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+						
 					</>
 				)}
 			</div>

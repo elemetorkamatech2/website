@@ -5,6 +5,7 @@ import { Login } from "../Components/Login/login"
 import { EditDetails } from "../Components/EditDetails/editDetails"
 import { Details } from "../Components/Website/viewDetails"
 import { AllWebsite } from "../Components/Website/allWebsite"
+import {FormCreatingWebsite} from "../Components/FormCreatingWebsite/FormCreatingWebsite"
 export const MyRoutes = () => {
     return <>
         <Routes>
@@ -14,7 +15,8 @@ export const MyRoutes = () => {
                  <Route path="EditDetails"      element={<EditDetails />}></Route> 
                  <Route path="Details"      element={<Details />}></Route>    
                  <Route path="AllWebsite"   element={<AllWebsite />}></Route>     
- 
+                 <Route path="put"   element={<AllWebsite />}></Route>     
+                 <Route path="FormCreatingWebsite" element={<FormCreatingWebsite />} />
         </Routes>
 
     </>
