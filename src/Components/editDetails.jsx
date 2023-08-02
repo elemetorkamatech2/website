@@ -3,7 +3,7 @@ import { useRef ,useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './editDetails.css';
 import React from 'react';
-import { postWebApi } from '../Api/apiWeb';
+import { putWebApi } from '../Api/apiWeb';
 
 export const EditDetails = ()=>{
 
@@ -29,9 +29,6 @@ export const EditDetails = ()=>{
   const statusRef = useRef();   
   const backupsRef = useRef();   
   const userIdRef = useRef(); 
-  
-
-	
 
 	const validateTitle = (title) => {
 		const titleRegex = /^(?=.*[a-zA-Z])[a-zA-Z\s-]{3,20}$/;
@@ -104,11 +101,8 @@ export const EditDetails = ()=>{
 						
 		console.log(myweb);
 		debugger
-			//postWebApi(myweb);
-	 };
-	
-	
-	
+			//putWebApi(myweb);
+	 };		
        
 	return<>
 		<div className="container">
@@ -128,7 +122,6 @@ export const EditDetails = ()=>{
 					</div>
 					<div className="col-75">
 						<input type="text" id="ladress" ref={descriptionRef} name="lastname"  placeholder={myweb.description}/>
-						
 					</div>
 				</div>
 				<div className="row">
@@ -137,7 +130,6 @@ export const EditDetails = ()=>{
 					</div>
 					<div className="col-75">
 						<input type="text" id="ladress" ref={domainRef} name="lastname"  placeholder={myweb.domain}/>
-						
 					</div>
 				</div>
 				<div className="row">
@@ -146,7 +138,6 @@ export const EditDetails = ()=>{
 					</div>
 					<div className="col-75">
 						<input type="text" id="ladress" name="lastname" ref={typeOfDomainRef} placeholder={myweb.typeOfDomain}/>
-						
 					</div>
 				</div>
 				<div className="row">
@@ -155,7 +146,6 @@ export const EditDetails = ()=>{
 					</div>
 					<div className="col-75">
 						<input type="text" id="ladress" name="lastname" ref={cpuRef} placeholder={myweb.cpu}/>
-						
 					</div>
 				</div>
 				<div className="row">
@@ -164,7 +154,6 @@ export const EditDetails = ()=>{
 					</div>
 					<div className="col-75">
 						<input type="text" id="ladress" name="lastname" ref={memoryRef} placeholder={myweb.memory}/>
-						
                    </div>
 				</div>
 				<div className="row">
@@ -173,7 +162,6 @@ export const EditDetails = ()=>{
 					</div>
 					<div className="col-75">
 						<input type="text" id="ladress" name="lastname" ref={statusRef} placeholder={myweb.status}/>
-						
 					</div>
 				</div>
 				<div className="row">
@@ -182,7 +170,6 @@ export const EditDetails = ()=>{
 					</div>
 					<div className="col-75">
 						<input type="text" id="ladress" name="lastname" ref={backupsRef} placeholder={myweb.backups}/>
-						
 					</div>
 				</div>
 				<div className="row">
@@ -200,8 +187,6 @@ export const EditDetails = ()=>{
 				</div>
 			</form>
 		</div>
-
-        
 	</>;
 };
    
