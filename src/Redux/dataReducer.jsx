@@ -45,8 +45,6 @@ users: [
 	{ id: 1, name: 'avraham', mail: 'avraham@gmail.com', password: 1234 },
 ],
 };
-
-
 export const dataReducer = produce((state = InitialState, action) => {
 	switch (action.type) {
 	case 'SET_USERS':
@@ -65,5 +63,3 @@ export const dataReducer = produce((state = InitialState, action) => {
 		return state;
 	}
 }, InitialState);
-
- 

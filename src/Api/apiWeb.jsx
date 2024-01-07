@@ -9,7 +9,7 @@ import { SetWeb } from '../Redux/action';
    // return response.data;
 		dispatch(SetWeb(response.data))
     } catch (err) {
-		
+
 		console.log(err);
 		return null;
 	}
